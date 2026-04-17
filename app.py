@@ -3,13 +3,11 @@ import joblib
 import pandas as pd
 from utils.preprocess import preprocess_input
 
-# Load model & scaler
 model = joblib.load("model/model.pkl")
 scaler = joblib.load("model/scaler.pkl")
 
 st.set_page_config(page_title="Housing Price Predictor", layout="wide")
 
-# Header
 st.markdown(
     "<h1 style='text-align: center; color: #4CAF50;'>California Housing Price Prediction</h1>",
     unsafe_allow_html=True
@@ -21,7 +19,6 @@ st.markdown(
 
 st.divider()
 
-# Layout
 col1, col2 = st.columns(2)
 
 with col1:
@@ -40,7 +37,6 @@ with col2:
 
 st.divider()
 
-# Prediction
 if st.button(" Predict Price"):
     input_data = {
         "MedInc": MedInc,
@@ -56,9 +52,8 @@ if st.button(" Predict Price"):
     processed = preprocess_input(input_data, scaler)
     prediction = model.predict(processed)[0]
 
-    st.success(f"💰 Estimated House Price: ${round(prediction * 100000, 2)}")
+    st.success(f" Estimated House Price: ${round(prediction * 100000, 2)}")
 
-    # Chart (visual boost 🔥)
     chart_data = pd.DataFrame({
         "Feature": ["Income", "Rooms", "Population"],
         "Value": [MedInc, AveRooms, Population]
