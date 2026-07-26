@@ -9,7 +9,7 @@
 [![Scikit-learn](https://img.shields.io/badge/Scikit--learn-ML-F7931E?logo=scikit-learn&logoColor=white)](https://scikit-learn.org/)
 [![License](https://img.shields.io/badge/License-MIT-green)](#-license)
 
-🔗 **[Live Demo](#)** &nbsp;·&nbsp; 📂 **[Source Code](https://github.com/anshikachaurasia27/California-housing-prediction-)**
+🔗 **[Live Demo](https://california-housing-price-prediction-4xzj.onrender.com)** &nbsp;·&nbsp; 📂 **[Source Code](https://github.com/anshikachaurasia27/California-housing-prediction-)**
 
 </div>
 
